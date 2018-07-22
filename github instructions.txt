@@ -1,0 +1,22 @@
+1- Go to github.com
+
+2-Go to the right side and click on (+) to create a new repository 
+
+3-  Type the name of the repository and other details and press Create repository 
+
+4- Copy the address of your repository 
+
+in your PC search for gitbash and follow those instructions : 
+
+* Run cd Desktop (ceci pour pointer sur le bureau) 
+
+* Run git clone (place address of the repository)
+
+* Run cd  (name of the repository)
+
+=> Paste your project which you want to upload in the php_openclassroom folder on Desktop
+
+    -> Run (git status)
+    -> Run (git add .)
+    -> Run (git commit -m "write a comment")
+    ->Run (git push origin master)
