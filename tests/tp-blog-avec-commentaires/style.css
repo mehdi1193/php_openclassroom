@@ -1,0 +1,94 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5 août 2018, 09:56:45
+    Author     : esouiyah
+*/
+
+h1, h3
+{
+    text-align:center;
+}
+h3
+{
+    background-color:black;
+    color:white;
+    font-size:0.9em;
+    margin-bottom:0px;
+}
+.news p
+{
+    background-color:RGB(0, 51, 102);
+    margin-top:0px;
+}
+.news
+{
+    width:70%;
+    margin:auto;
+    color: RGB(0, 127, 255);
+}
+
+a
+{
+    text-decoration: none;
+    color: red;
+}
+/*-----------------CSS du tableau--------------*/ 
+table {
+    border: medium solid #6495ed;
+    border-collapse: collapse;
+    width: 50%;
+}
+th {
+    font-family: monospace;
+    border: thin solid #6495ed;
+    width: 50%;
+    padding: 5px;
+    background-color: #D0E3FA;
+    background-image: url(sky.jpg);
+}
+td {
+    font-family: sans-serif;
+    border: thin solid #6495ed;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+    background-color: #ffffff;
+}
+caption {
+    font-family: sans-serif;
+}
+.button4{
+ display:inline-block;
+ padding:0.3em 1.2em;
+ margin:0 0.1em 0.1em 0;
+ border:0.16em solid rgba(255,255,255,0);
+ border-radius:2em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+ text-align:center;
+ transition: all 0.2s;
+}
+.button4:hover{
+ border-color: rgba(255,255,255,1);
+}
+.button {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+
