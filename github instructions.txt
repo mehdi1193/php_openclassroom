@@ -20,3 +20,7 @@ in your PC search for gitbash and follow those instructions :
     -> Run (git add .)
     -> Run (git commit -m "write a comment")
     ->Run (git push origin master)
+
+=> To update your local with the last version : 
+
+	->git pull origin master
