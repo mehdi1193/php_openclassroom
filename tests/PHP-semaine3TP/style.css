@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19 août 2018, 21:00:43
+    Author     : esouiyah
+*/
+form
+{
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+label, input {
+    /* in order to define widths */
+    display: inline-block;
+}
+label {
+    width: 30%;
+    /* positions the label text beside the input */
+    text-align: right;
+}
+
+label + input {
+    width: 30%;
+    /* large margin-right to force the next element to the new-line
+       and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+}
+
+/* only the submit button is matched by this selector,
+   but to be sure you could use an id or class for that button */
+input + input {
+    float: right;
+}
+
+h3
+{
+    background-color:rgb(255, 255, 128);
+    color:black;
+    font-size:0.9em;
+    margin-bottom:0px;
+}
+
+a
+{
+    text-decoration: none;
+    color: blue;
+}
+
+
+

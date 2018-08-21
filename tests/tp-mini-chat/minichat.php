@@ -31,7 +31,7 @@ try{
         $rep=$bdd->query('select * from mini_chat order by id DESC limit 10  ');
         while($rep2=$rep->fetch()){
             echo '@'. htmlspecialchars($rep2['pseudo']).' : '.htmlspecialchars($rep2['message']).'</br>'; 
-        }   
+        } 
         
     ?>
   

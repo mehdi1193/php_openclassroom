@@ -1,0 +1,53 @@
+*{
+	margin: 0px;
+	padding:0px;
+}
+
+@font-face{
+	font-family: quick;
+	src: url('quick.otf');
+}
+
+@font-face{
+		font-family: caviar;
+	src: url('CaviarDreams.ttf');
+
+
+}
+
+body{
+	font-family: 'quick';
+	background-color:rgb(254,230,190);
+}
+
+header{
+	background-image: linear-gradient(to right,rgb(250,125,14), rgb(253,210,172));
+	height: 75px;
+}
+
+h1{
+	padding: 15px;
+
+}
+
+.boutonContainer{
+	display:flex;
+	height: 50px;
+	background-image: linear-gradient(to right,rgb(250,145,34), rgb(253,210,172));
+}
+
+.bouton{
+	padding: 10px;
+	margin-top: 5px;
+	margin-left: 25px;
+	width: 120px;
+	height: 20px;
+	text-decoration: none;
+	color:rgb(210,85,14);
+	text-align: center;
+	border-radius: 2px;
+}
+
+.bouton:hover{
+	color:rgb(180,40,4);
+}

@@ -9,7 +9,8 @@ try {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tp mini-chat</title>
+        <title>Tp mini-chat amélioré</title>        
+        <link href="style.css" rel="stylesheet" />
     </head>
     <script>
         function RefreshWindow()
@@ -19,25 +20,24 @@ try {
     </script>    
     <body>
         <?php
-//avec ISSET
 //Si la variable $_COOKIE['pseudo'] existe, alors $res = $_COOKIE['pseudo']  sinon elle vaut NULL 
         $res = isset($_COOKIE['pseudo']) ? $_COOKIE['pseudo'] : NULL;
         ?>
-        <h1>My First Mini-chat TP</h1>
+        <h1><center>My First Mini-chat TP</center></h1>
         <form action="minichat-post.php" method="post">
             <label>Pseudo :</label>
-            <input type="text" name="pseudo" required="required" value="<?php echo $res ?>"></input>
+            <input type="text" name="pseudo" required="required" value="<?php echo $res ?>"></input></br>
             <label>Message :</label>
-            <input type="text" name="message" required="required"></input>
-            <input type="submit" value="Envoyer"></input>    
+            <input type="text" name="message" required="required"></input></br></br>
+            <input type="submit" value="Envoyer" ></input>
         </form>
-        <input type="submit" value="Actualiser" onclick="return RefreshWindow();"></input>    
-        <h3>Discussion dans le Forum</h3>
+        </br>
+        <h3><center>Discussion dans le Forum</center></h3>
+        </br>
         <?php
         // La pagination 
         $limit = 5;
         $query = "SELECT * FROM minichat";
-
         $s = $bdd->prepare($query);
         $s->execute();
         $total_results = $s->rowCount();
@@ -47,17 +47,15 @@ try {
         } else {
             $page = $_GET['page'];
         }
-
-
-
         $starting_limit = ($page - 1) * $limit;
 
-        $response = $bdd->query("SELECT * FROM minichat ORDER BY id DESC LIMIT $starting_limit,$limit");
+        $response = $bdd->query("SELECT pseudo,message,DATE_FORMAT(date_publication, '%d/%m/%y à %Hh%imin%ss') AS datee FROM minichat ORDER BY id DESC LIMIT $starting_limit,$limit");
         while ($donnees = $response->fetch()) {
-            echo htmlspecialchars($donnees['pseudo']) . ' :' . htmlspecialchars($donnees['message']) . '</br>';
+            echo '[' . $donnees['datee'] . '] <b>' . htmlspecialchars($donnees['pseudo']) . '</b> :' . htmlspecialchars($donnees['message']) . '</br>';
         }
         $response->closeCursor();
         ?>
+        </br>
         <?php
         for ($page = 1; $page <= $total_pages; $page++):
             ?>
